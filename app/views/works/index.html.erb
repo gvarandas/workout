@@ -1,0 +1,38 @@
+<h1>Listing works</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>Amount</th>
+      <th>Scale</th>
+      <th>Calories</th>
+      <th>Date</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @works.each do |work| %>
+      <tr>
+        <td><%= work.activity_id %></td>
+        <td><%= work.amount %></td>
+        <td><%= work.scale %></td>
+        <td><%= work.calories %></td>
+        <td><%= work.date %></td>
+        <td><%= work.user_id %></td>
+        <td><%= link_to 'Show', work %></td>
+        <td><%= link_to 'Edit', edit_work_path(work) %></td>
+        <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work', new_work_path %>
+<%= link_to 'Home', root_path %>

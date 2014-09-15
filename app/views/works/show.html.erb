@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @work.activity_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @work.amount %>
+</p>
+
+<p>
+  <strong>Scale:</strong>
+  <%= @work.scale %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @work.calories %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @work.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @work.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>
